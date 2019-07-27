@@ -11,9 +11,9 @@
 		FF2CBA3D22EBDA190001A374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2CBA3C22EBDA190001A374 /* AppDelegate.swift */; };
 		FF2CBA4422EBDA1B0001A374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2CBA4322EBDA1B0001A374 /* Assets.xcassets */; };
 		FF2CBA4722EBDA1B0001A374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2CBA4522EBDA1B0001A374 /* LaunchScreen.storyboard */; };
-		FF2CBA5022EBDAE10001A374 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2CBA4E22EBDAE10001A374 /* HomeViewController.swift */; };
-		FF2CBA5122EBDAE10001A374 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2CBA4F22EBDAE10001A374 /* HomeViewController.xib */; };
 		FF2CBA5322EBDFBE0001A374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF2CBA5222EBDFB00001A374 /* GoogleService-Info.plist */; };
+		FF2CBA6022EBE5700001A374 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2CBA5E22EBE5700001A374 /* WelcomeViewController.swift */; };
+		FF2CBA6122EBE5700001A374 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2CBA5F22EBE5700001A374 /* WelcomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		FF2CBA4322EBDA1B0001A374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF2CBA4622EBDA1B0001A374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF2CBA4822EBDA1B0001A374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF2CBA4E22EBDAE10001A374 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		FF2CBA4F22EBDAE10001A374 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FF2CBA5222EBDFB00001A374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FF2CBA5E22EBE5700001A374 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FF2CBA5F22EBE5700001A374 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,15 +80,87 @@
 		FF2CBA3B22EBDA190001A374 /* Order Food */ = {
 			isa = PBXGroup;
 			children = (
-				FF2CBA3C22EBDA190001A374 /* AppDelegate.swift */,
-				FF2CBA4322EBDA1B0001A374 /* Assets.xcassets */,
-				FF2CBA4522EBDA1B0001A374 /* LaunchScreen.storyboard */,
-				FF2CBA4822EBDA1B0001A374 /* Info.plist */,
-				FF2CBA4E22EBDAE10001A374 /* HomeViewController.swift */,
-				FF2CBA4F22EBDAE10001A374 /* HomeViewController.xib */,
-				FF2CBA5222EBDFB00001A374 /* GoogleService-Info.plist */,
+				FF2CBA5D22EBE5330001A374 /* Support */,
+				FF2CBA5522EBE4C20001A374 /* View */,
 			);
 			path = "Order Food";
+			sourceTree = "<group>";
+		};
+		FF2CBA5522EBE4C20001A374 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF2CBA3C22EBDA190001A374 /* AppDelegate.swift */,
+				FF2CBA5722EBE4D30001A374 /* Custom */,
+				FF2CBA5622EBE4CC0001A374 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF2CBA5622EBE4CC0001A374 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF2CBA5922EBE4E90001A374 /* Login */,
+				FF2CBA5822EBE4E00001A374 /* Tabbar */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FF2CBA5722EBE4D30001A374 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		FF2CBA5822EBE4E00001A374 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		FF2CBA5922EBE4E90001A374 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FF2CBA5A22EBE4F30001A374 /* 1. Welcome */,
+				FF2CBA5C22EBE50A0001A374 /* 2. Register */,
+				FF2CBA5B22EBE5030001A374 /* 3. Login */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FF2CBA5A22EBE4F30001A374 /* 1. Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				FF2CBA5E22EBE5700001A374 /* WelcomeViewController.swift */,
+				FF2CBA5F22EBE5700001A374 /* WelcomeViewController.xib */,
+			);
+			path = "1. Welcome";
+			sourceTree = "<group>";
+		};
+		FF2CBA5B22EBE5030001A374 /* 3. Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "3. Login";
+			sourceTree = "<group>";
+		};
+		FF2CBA5C22EBE50A0001A374 /* 2. Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "2. Register";
+			sourceTree = "<group>";
+		};
+		FF2CBA5D22EBE5330001A374 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FF2CBA5222EBDFB00001A374 /* GoogleService-Info.plist */,
+				FF2CBA4822EBDA1B0001A374 /* Info.plist */,
+				FF2CBA4322EBDA1B0001A374 /* Assets.xcassets */,
+				FF2CBA4522EBDA1B0001A374 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +223,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2CBA6122EBE5700001A374 /* WelcomeViewController.xib in Resources */,
 				FF2CBA4722EBDA1B0001A374 /* LaunchScreen.storyboard in Resources */,
 				FF2CBA5322EBDFBE0001A374 /* GoogleService-Info.plist in Resources */,
 				FF2CBA4422EBDA1B0001A374 /* Assets.xcassets in Resources */,
-				FF2CBA5122EBDAE10001A374 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2CBA6022EBE5700001A374 /* WelcomeViewController.swift in Sources */,
 				FF2CBA3D22EBDA190001A374 /* AppDelegate.swift in Sources */,
-				FF2CBA5022EBDAE10001A374 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Order Food/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Order Food/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,7 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Order Food/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Order Food/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
