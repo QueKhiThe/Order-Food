@@ -32,12 +32,12 @@ final class WelcomeViewController: UIViewController {
 
     // MARK: - IBActions
     @IBAction private func signupButtonTouchUpInside(_ sender: Any) {
-        handleClickSignupButton()
+        handleClickSubmit(type: .signup)
         resetInput()
     }
 
     @IBAction private func loginButtonTouchUpInside(_ sender: Any) {
-        handleClickLoginButton()
+        handleClickSubmit(type: .login)
         resetInput()
     }
 
@@ -54,27 +54,45 @@ extension WelcomeViewController {
         slideView.layer.cornerRadius = 20
     }
 
-    private func handleClickLoginButton() {
-        nameTextFieldConstrantTop.constant = 0
-        nameTextFieldConstrantHeight.constant = 0
-        nameLabelConstrantHeight.constant = 0
-        submitButton.setTitle("LOG IN", for: .normal)
-        loginTitleButton.setTitleColor(#colorLiteral(red: 0.5843137255, green: 0.07450980392, blue: 0.07450980392, alpha: 1), for: .normal)
-        signupTitleButton.setTitleColor(#colorLiteral(red: 0.3498527333, green: 0.3745241117, blue: 0.3647099233, alpha: 1), for: .normal)
-    }
-
-    private func handleClickSignupButton() {
-        nameLabelConstrantHeight.constant = 21
-        nameTextFieldConstrantHeight.constant = 30
-        nameTextFieldConstrantTop.constant = 50
-        submitButton.setTitle("SIGN UP", for: .normal)
-        signupTitleButton.setTitleColor(#colorLiteral(red: 0.5843137255, green: 0.07450980392, blue: 0.07450980392, alpha: 1), for: .normal)
-        loginTitleButton.setTitleColor(#colorLiteral(red: 0.3490196078, green: 0.3764705882, blue: 0.3647058824, alpha: 1), for: .normal)
+    private func handleClickSubmit(type: SubmitType) {
+        submitButton.setTitle(type.title, for: .normal)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            if type == .login {
+                self.nameTextFieldConstrantTop.constant = 0
+                self.nameTextFieldConstrantHeight.constant = 0
+                self.nameLabelConstrantHeight.constant = 0
+                self.loginTitleButton.setTitleColor(#colorLiteral(red: 0.5843137255, green: 0.07450980392, blue: 0.07450980392, alpha: 1), for: .normal)
+                self.signupTitleButton.setTitleColor(#colorLiteral(red: 0.3498527333, green: 0.3745241117, blue: 0.3647099233, alpha: 1), for: .normal)
+            } else {
+                self.nameLabelConstrantHeight.constant = 21
+                self.nameTextFieldConstrantHeight.constant = 30
+                self.nameTextFieldConstrantTop.constant = 50
+                self.signupTitleButton.setTitleColor(#colorLiteral(red: 0.5843137255, green: 0.07450980392, blue: 0.07450980392, alpha: 1), for: .normal)
+                self.loginTitleButton.setTitleColor(#colorLiteral(red: 0.3490196078, green: 0.3764705882, blue: 0.3647058824, alpha: 1), for: .normal)
+            }
+        }
     }
 
     private func resetInput() {
         phoneTextField.text = ""
         nameTextField.text = ""
         passwordTextField.text = ""
+    }
+}
+
+extension WelcomeViewController {
+
+    enum SubmitType: String {
+        case login
+        case signup
+
+        var title: String {
+            switch self {
+            case .login:
+                return "LOG IN"
+            default:
+                return "SIGN UP"
+            }
+        }
     }
 }
