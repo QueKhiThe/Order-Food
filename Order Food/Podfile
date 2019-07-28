@@ -7,5 +7,6 @@ target 'Order Food' do
 
   # Pods for Order Food
   pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
 
 end

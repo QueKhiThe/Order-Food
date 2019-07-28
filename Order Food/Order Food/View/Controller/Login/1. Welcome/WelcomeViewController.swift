@@ -22,6 +22,9 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet private weak var slideView: UIView!
     @IBOutlet private weak var phoneTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
+
+    //MARK: - Properties
+    var viewModel = WelcomeViewModel()
     
     // MARK: - LifeCycles
     override func viewDidLoad() {
@@ -42,7 +45,7 @@ final class WelcomeViewController: UIViewController {
     }
 
     @IBAction private func submitButtonTouchUpInside(_ sender: Any) {
-
+        login()
     }
 }
 
@@ -52,6 +55,18 @@ extension WelcomeViewController {
     private func configUI() {
         submitButton.layer.cornerRadius = 25
         slideView.layer.cornerRadius = 20
+    }
+
+    private func login() {
+        guard let phone = phoneTextField.text, let password = passwordTextField.text else { return }
+        viewModel.loginWithPhoneAndPassword(phone: phone, password: password) { result in
+            switch result {
+            case .success:
+                print("Success")
+            case .failure:
+                print("Failure")
+            }
+        }
     }
 
     private func handleClickSubmit(type: SubmitType) {
