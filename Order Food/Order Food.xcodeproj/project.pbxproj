@@ -140,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				FF2CBA5E22EBE5700001A374 /* WelcomeViewController.swift */,
-				FF2CBA5F22EBE5700001A374 /* WelcomeViewController.xib */,
 				FF0BDD2A22ED5581001C6669 /* WelcomeViewModel.swift */,
+				FF2CBA5F22EBE5700001A374 /* WelcomeViewController.xib */,
 			);
 			path = "1. Welcome";
 			sourceTree = "<group>";

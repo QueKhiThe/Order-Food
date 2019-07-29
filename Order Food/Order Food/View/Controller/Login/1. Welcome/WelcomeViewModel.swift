@@ -19,7 +19,7 @@ final class WelcomeViewModel {
 
     func loginWithPhoneAndPassword(phone: String, password: String, completion: @escaping Completion) {
         ref?.observe(.value, with: { snapshot in
-            guard let passwordLogin = snapshot.childSnapshot(forPath: "\(phone)/Password").value as? String else { return }
+            guard let passwordLogin = snapshot.childSnapshot(forPath: phone).childSnapshot(forPath: "Password").value as? String else { return }
             if passwordLogin.elementsEqual(password) {
                 completion(.success)
             } else {
