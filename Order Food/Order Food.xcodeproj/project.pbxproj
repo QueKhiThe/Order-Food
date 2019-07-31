@@ -8,18 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		800893E8516D4AA2C9DD5DAC /* Pods_Order_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F655006D5CA60A74F7CC5CE3 /* Pods_Order_Food.framework */; };
+		FF0BDD2B22ED5581001C6669 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0BDD2A22ED5581001C6669 /* WelcomeViewModel.swift */; };
+		FF0BDD2E22ED5D23001C6669 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0BDD2D22ED5D23001C6669 /* FirebaseManager.swift */; };
 		FF2CBA3D22EBDA190001A374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2CBA3C22EBDA190001A374 /* AppDelegate.swift */; };
 		FF2CBA4422EBDA1B0001A374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2CBA4322EBDA1B0001A374 /* Assets.xcassets */; };
 		FF2CBA4722EBDA1B0001A374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2CBA4522EBDA1B0001A374 /* LaunchScreen.storyboard */; };
 		FF2CBA5322EBDFBE0001A374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF2CBA5222EBDFB00001A374 /* GoogleService-Info.plist */; };
 		FF2CBA6022EBE5700001A374 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2CBA5E22EBE5700001A374 /* WelcomeViewController.swift */; };
 		FF2CBA6122EBE5700001A374 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2CBA5F22EBE5700001A374 /* WelcomeViewController.xib */; };
+		FF2CBA6522EC0E500001A374 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2CBA6422EC0E500001A374 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		889251C7530A1E18438AD87F /* Pods-Order Food.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Order Food.release.xcconfig"; path = "Pods/Target Support Files/Pods-Order Food/Pods-Order Food.release.xcconfig"; sourceTree = "<group>"; };
 		DA7D37353D4AE7C9D9808454 /* Pods-Order Food.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Order Food.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Order Food/Pods-Order Food.debug.xcconfig"; sourceTree = "<group>"; };
 		F655006D5CA60A74F7CC5CE3 /* Pods_Order_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Order_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0BDD2A22ED5581001C6669 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		FF0BDD2D22ED5D23001C6669 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		FF2CBA3922EBDA190001A374 /* Order Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Order Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2CBA3C22EBDA190001A374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2CBA4322EBDA1B0001A374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		FF2CBA5222EBDFB00001A374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF2CBA5E22EBE5700001A374 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FF2CBA5F22EBE5700001A374 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		FF2CBA6422EC0E500001A374 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 		FF2CBA3B22EBDA190001A374 /* Order Food */ = {
 			isa = PBXGroup;
 			children = (
+				FF2CBA6222EC0E280001A374 /* Model */,
 				FF2CBA5D22EBE5330001A374 /* Support */,
 				FF2CBA5522EBE4C20001A374 /* View */,
 			);
@@ -133,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				FF2CBA5E22EBE5700001A374 /* WelcomeViewController.swift */,
+				FF0BDD2A22ED5581001C6669 /* WelcomeViewModel.swift */,
 				FF2CBA5F22EBE5700001A374 /* WelcomeViewController.xib */,
 			);
 			path = "1. Welcome";
@@ -159,8 +167,25 @@
 				FF2CBA4822EBDA1B0001A374 /* Info.plist */,
 				FF2CBA4322EBDA1B0001A374 /* Assets.xcassets */,
 				FF2CBA4522EBDA1B0001A374 /* LaunchScreen.storyboard */,
+				FF0BDD2D22ED5D23001C6669 /* FirebaseManager.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		FF2CBA6222EC0E280001A374 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF2CBA6322EC0E400001A374 /* Schema */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF2CBA6322EC0E400001A374 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				FF2CBA6422EC0E500001A374 /* User.swift */,
+			);
+			path = Schema;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +290,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Order Food/Pods-Order Food-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -272,6 +298,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +314,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF2CBA6022EBE5700001A374 /* WelcomeViewController.swift in Sources */,
+				FF0BDD2B22ED5581001C6669 /* WelcomeViewModel.swift in Sources */,
+				FF0BDD2E22ED5D23001C6669 /* FirebaseManager.swift in Sources */,
 				FF2CBA3D22EBDA190001A374 /* AppDelegate.swift in Sources */,
+				FF2CBA6522EC0E500001A374 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
